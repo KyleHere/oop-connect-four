@@ -1,16 +1,16 @@
-export default class Column{
-  constructor(){
+export default class Column {
+  constructor() {
     // this.tokens = [null, null, null, null, null, null];
     this.tokens = [];
     this.numOfTokens = 0;
   }
 
-  checkIsFull(){
-    return this.tokens.length === 6
+  checkIsFull() {
+    return this.tokens.length === 6;
   }
 
-  add(playerNumber){
-    if(!this.checkIsFull()){
+  add(playerNumber) {
+    if (!this.checkIsFull()) {
       this.tokens.push(playerNumber);
     }
   }
@@ -26,9 +26,7 @@ export default class Column{
   // }
 
   //return this.tokens[5- rowIndex]
-  getTokenAt(rowIndex){
-      return this.tokens[rowIndex]
+  getTokenAt(rowIndex) {
+    return this.tokens[rowIndex];
   }
-
-
 }
