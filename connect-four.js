@@ -21,6 +21,23 @@ function updateUI() {
     newTargets.classList.add('red')
     newTargets.classList.remove('black')
   }
+
+  for (let row = 0; row <= 5; row++) {
+    for (let col = 0; col <= 6; col++) {
+      const currentSpace = document.querySelector(`#square-${row}-${col}`)
+      currentSpace.innerHTML = '';
+      const div = document.createElement('div');
+      if (game.getTokenAt(row, col) === 1) {
+        div.classList.add('token');
+        div.classList.add('black');
+        currentSpace.append(div);
+      } else if (game.getTokenAt(row, col) === 2) {
+        div.classList.add('token');
+        div.classList.add('red');
+        currentSpace.append(div);
+      }
+  }
+}
 }
 
 window.addEventListener('DOMContentLoaded', (event) => {
@@ -49,7 +66,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
     updateUI();
   });
 
-  targets.addEventListener('click', event =>{
+  targets.addEventListener('click', event => {
     if (!event.target.id.startsWith('column')) {
       return;
     }

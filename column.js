@@ -27,6 +27,6 @@ export default class Column {
 
   //return this.tokens[5- rowIndex]
   getTokenAt(rowIndex) {
-    return this.tokens[rowIndex];
+    return this.tokens[5 - rowIndex];
   }
 }
