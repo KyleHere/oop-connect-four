@@ -15,17 +15,6 @@ export default class Column {
     }
   }
 
-  // add(playerNumber){
-  //   for( let index = 5; index >= 0; i--){
-  //     if(this.tokens[index] === null){
-  //       this.tokens[index] = playerNumber;
-  //       this.numOfTokens += 1;
-  //       break;
-  //     }
-  //   }
-  // }
-
-  //return this.tokens[5- rowIndex]
   getTokenAt(rowIndex) {
     return this.tokens[5 - rowIndex];
   }

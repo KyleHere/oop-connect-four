@@ -36,8 +36,17 @@ function updateUI() {
         div.classList.add('red');
         currentSpace.append(div);
       }
+    }
   }
-}
+  for(let i = 0; i <= 6; i++){
+    const columnId = document.getElementById(`column-${i}`);
+    if(game.checkColumnFull(i)){
+      columnId.classList.add('full');
+    }
+    else if(!game.checkColumnFull(i)){
+      columnId.classList.remove('full');
+    }
+  }
 }
 
 window.addEventListener('DOMContentLoaded', (event) => {
