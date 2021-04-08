@@ -1,4 +1,4 @@
-import Column from './column';
+import Column from './column.js';
 
 export default class Game {
   constructor(playerOneName, playerTwoName, currentPlayer) {
@@ -20,7 +20,7 @@ export default class Game {
   }
 
   playInColumn(columnIndex) {
-    this.columns[columnIndex] = add(this.currentPlayer)
+    this.columns[columnIndex].add(this.currentPlayer)
 
     if (this.currentPlayer === 1) {
       this.currentPlayer = 2;
